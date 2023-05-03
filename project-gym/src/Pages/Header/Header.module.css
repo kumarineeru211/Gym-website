@@ -1,0 +1,84 @@
+.nav {
+    display: flex;
+    border: 2px solid black;
+    font-size: 1.5em;
+    height: 80px;
+    
+    background-image: url("https://img.freepik.com/free-photo/abstract-luxury-gradient-blue-background-smooth-dark-blue-with-black-vignette-studio-banner_1258-117928.jpg");
+    background-color: transparent;
+    justify-content: space-between;
+    gap: 100px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+   
+        background: linear-gradient(270deg, #070707, #1a1a38);
+        background-size: 400% 400%;
+    
+        animation: AnimationName 3s ease infinite;
+    }
+    
+    @keyframes AnimationName {
+        0%{background-position:0% 50%}
+        50%{background-position:100% 50%}
+        100%{background-position:0% 50%}
+    }
+
+
+
+
+.nav *{
+    text-decoration: none;
+    color: rgb(223, 206, 206);
+    margin-top: 5px;
+    margin-right: 10px;
+}
+
+.Link{
+    display: flex;
+    gap: 20px;
+    margin-right: 5vw;
+}
+.button{
+    grid-column: 5;
+    display: none;
+}
+@media screen and  (max-width: 150px){
+    .Link{
+        font-size: 3vw;
+    }
+}
+
+
+@media screen and  (max-width: 850px){
+    .nav{
+        display: flex;
+        justify-content: space-between;
+    }
+    .mobileLink{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        font-size: 20px;
+        z-index: 99;
+        position: relative;
+        background-color: rgba(57, 55, 53, 0.932);
+        gap: 20px;
+        width: 50vw;
+        height: 52vh;
+        align-items: center;
+        border-radius: 20px;
+    }
+    .button{
+        display: block;
+        margin-bottom: 10px;
+
+    }
+    .button span{
+        display: flex;
+        justify-content: flex-end;
+    }
+    .Link{
+        display: none;
+    }
+}

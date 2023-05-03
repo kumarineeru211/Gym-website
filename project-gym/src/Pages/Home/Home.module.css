@@ -1,0 +1,34 @@
+.mainDiv{
+    display: flex;
+    height: 100vh; 
+    width: 100vw; 
+    margin: 0;
+    padding: 0;
+    flex-direction: column;
+    gap: 10vh;
+    
+}
+.mainDiv img{
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    position: fixed;
+   
+}
+.intro{
+    color: white;
+    /* position: absolute; */
+    margin-top: 100px;
+    margin-bottom: 100px;
+    padding: 10vw;
+    background-color: rgba(0, 0, 0, 0.411);
+    background: linear-gradient(270deg,#07070777, #1a1a3881);
+    background-size: 400% 400%;
+    animation: AnimationName 3s ease-in infinite;
+}
+
+@keyframes AnimationName {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
