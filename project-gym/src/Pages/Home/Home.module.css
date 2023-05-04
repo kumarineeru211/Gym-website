@@ -21,7 +21,7 @@
     margin-top: 100px;
     margin-bottom: 100px;
     padding: 10vw;
-    background-color: rgba(0, 0, 0, 0.411);
+    background-color: rgba(150, 35, 89, 0.411);
     background: linear-gradient(270deg,#07070777, #1a1a3881);
     background-size: 400% 400%;
     animation: AnimationName 3s ease-in infinite;

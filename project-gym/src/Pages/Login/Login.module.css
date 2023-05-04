@@ -1,0 +1,31 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.Div{
+    width: 216px;
+    height: auto;
+    display: flex;
+    gap: 2vh;
+    flex-direction: column;
+    box-shadow: 15px 18px 25px rgba(34, 36, 34, 0.678);
+}
+
+
+
+.Div TextField {
+    font-size: 3vh;
+}
+
+
+.mainDiv {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    background-size: cover;
+    background-image: url("https://wallpapercave.com/wp/wp2639568.jpg")
+}
+
