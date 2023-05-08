@@ -9,7 +9,7 @@ import { atom  } from "recoil";
 
  export  const userData=atom({
     key:'userData',
-    default:[{fname:'rohan',lname:'kumar',email:'rohan@gmail.com' , password:'rohan123'},...usersDataFromLocal]
+    default:[]
 })
 
 

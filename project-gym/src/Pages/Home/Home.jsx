@@ -2,6 +2,9 @@ import React, { useState, useEffect } from "react";
 import Header from "../Header/Header";
 import HomeCss from "./Home.module.css";
 import Footer  from "../Footer/Footer";
+import { useRecoilValue } from "recoil";
+import { useNavigate } from "react-router-dom";
+import { authAtom } from "../Login/Atom";
 function Home() {
   const Array = [
     {
@@ -29,6 +32,14 @@ function Home() {
     },
   ];
   const [data, setData] = useState(0);
+  // const auth = useRecoilValue(authAtom);
+  // const navigate = useNavigate();
+
+  // useEffect(()=>{
+  //   if(!auth.isloggedIn){
+  //     navigate('/registration')
+  //   }
+  // })
 
   useEffect(() => {
     const interval = setInterval(() => {

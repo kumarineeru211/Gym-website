@@ -1,7 +1,8 @@
 .mainWrapper{
     height: 700px;
-    width: 98.8vw;
+    width: 100vw;
     display: flex;
+    object-fit: cover;
     flex-direction: column;
       background: linear-gradient(270deg, #070707, #1a1a38);
       background-size: 400% 400%;
@@ -50,7 +51,7 @@
     height: 45vh;
     border-top-right-radius: 25px;
     border-top-left-radius: 25px;
-    /* object-fit: cover; */
+    object-fit: cover;
   }
   .submit {
     align-items: center;

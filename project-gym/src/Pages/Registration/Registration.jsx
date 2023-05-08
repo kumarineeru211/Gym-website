@@ -5,13 +5,16 @@ import RegCss from "./Registration.module.css";
 import { userData } from "../../locaStorage/localStorage";
 import TextField from "@mui/material/TextField";
 import Button from "@mui/material/Button";
+import { loginStat } from "../Login/Atom";
 
 function Registration() {
+
   const [local, setLocal] = useRecoilState(userData);
   const [fname, setFname] = useState("");
   const [lname, setLname] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [isLoggedin, setLoggedIn] = useRecoilState(loginStat)
 
   const [submitButton, setSubmitButton] = useState(false);
   function submitToLocal() {
@@ -25,6 +28,7 @@ function Registration() {
       setLocal(newData);
       localStorage.setItem("users", JSON.stringify(newData));
       alert("Check all the input field");
+     
     } else if (
       emailRegex.test(email) &&
       nameRegex.test(fname) &&
@@ -34,10 +38,14 @@ function Registration() {
       const newData = [...local, { fname, lname, email, password }];
       setLocal(newData);
       localStorage.setItem("users", JSON.stringify(newData));
+
+      localStorage.setItem('loginStat',true)
+      setLoggedIn(true)
       setSubmitButton(!submitButton);
+
       alert("Registration successful Click on Go to Login Button");
     } else {
-      alert("Please check all the fields  ");
+      alert("Please check all the fields ");
     }
   }
   function handleSubmitButton() {
@@ -52,7 +60,7 @@ function Registration() {
           type="text"
           color="success"
           sx={{
-            width: "25ch",
+            width: "30ch",
             paddingBottom: "0px",
             backgroundColor: "rgb(122, 128, 125)",
           }}
@@ -72,7 +80,7 @@ function Registration() {
 
         <TextField
           sx={{
-            width: "25ch",
+            width: "30ch",
             paddingBottom: "0px",
             backgroundColor: "rgb(122, 128, 125)",
           }}
@@ -93,7 +101,7 @@ function Registration() {
 
         <TextField
           sx={{
-            width: "25ch",
+            width: "30ch",
             paddingBottom: "0px",
             backgroundColor: "rgb(122, 128, 125)",
           }}
@@ -114,7 +122,7 @@ function Registration() {
         />
         <TextField
           sx={{
-            width: "25ch",
+            width: "30ch",
             paddingBottom: "",
             backgroundColor: "rgb(122, 128, 125)",
           }}
